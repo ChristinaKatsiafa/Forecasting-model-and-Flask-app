@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML API</title>
+  
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Active Power Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="/predict" method="post">
+         <label for="HubTemperature">Hub Temperature:</label>
+         <input type="text" name="HubTemperature" id="HubTemperature"><br>
+         <label for="MainBoxTemperature">Main Box Temperature:</label>
+         <input type="text" name="MainBoxTemperature" id="MainBoxTemperature"><br>
+         <label for="WindDirection">Wind Direction:</label>
+         <input type="text" name="WindDirection" id="WindDirection"><br>
+         <label for="NacellePosition">Nacelle Position:</label>
+         <input type="text" name="NacellePosition" id="NacellePosition"><br>
+         <label for="AmbientTemperatue">Ambient Temperature:</label>
+         <input type="text" name="AmbientTemperatue" id="AmbientTemperatue"><br>
+         <label for="TurbineStatus">Turbine Status:</label>
+         <input type="text" name="TurbineStatus" id="TurbineStatus"><br>
+         <label for="WindSpeed">Wind Speed:</label>
+         <input type="text" name="WindSpeed" id="WindSpeed"><br>
+         <input type="submit" value="Predict">
+     </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
